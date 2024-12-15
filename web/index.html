@@ -16,6 +16,29 @@
   -->
   <base href="$FLUTTER_BASE_HREF">
 
+  <script type = "module">
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBPpc1RCbz3XdVFKBrf9M-4KFipD_JpZ3o",
+  authDomain: "website-12c7e.firebaseapp.com",
+  projectId: "website-12c7e",
+  storageBucket: "website-12c7e.firebasestorage.app",
+  messagingSenderId: "440085900092",
+  appId: "1:440085900092:web:ded56411d65495b7134c39",
+  measurementId: "G-5TMZYRL8M2"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+  </script>
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">

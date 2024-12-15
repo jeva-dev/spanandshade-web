@@ -1,7 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:spanandshade/main_UI.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+        apiKey: "AIzaSyBPpc1RCbz3XdVFKBrf9M-4KFipD_JpZ3o",
+        authDomain: "website-12c7e.firebaseapp.com",
+        projectId: "website-12c7e",
+        storageBucket: "website-12c7e.firebasestorage.app",
+        messagingSenderId: "440085900092",
+        appId: "1:440085900092:web:ded56411d65495b7134c39",
+        measurementId: "G-5TMZYRL8M2"),
+  );
   runApp(const MyApp());
 }
 
