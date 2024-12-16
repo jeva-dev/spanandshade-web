@@ -41,7 +41,7 @@ class _HeaderState extends State<Header> {
         children: [
           // Image on the start, resizing based on screen width and height
           Image.asset(
-            "s&s.png",
+            "assets/s&s.png",
             height: screenHeight * 0.15, // 15% of the screen height
             width: screenWidth * 0.3, // 30% of the screen width
             fit: BoxFit.contain, // Ensure the image scales properly
