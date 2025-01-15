@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class MainUI extends StatefulWidget {
   const MainUI({super.key});
 
@@ -266,7 +265,7 @@ class _MainUIState extends State<MainUI> {
                                   ),
                                 ],
                               )
-                            : Row(
+                            : const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [
@@ -280,31 +279,25 @@ class _MainUIState extends State<MainUI> {
                                           color: Colors.tealAccent,
                                         ),
                                       ),
-                                      const SizedBox(height: 8),
-                                      TextButton(
-                                        onPressed: () {},
-                                        child: const Text(
-                                          'info@spanandshade.com',
-                                          style: TextStyle(
-                                            color: Colors.white70,
-                                            fontSize: 16,
-                                          ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        'info@spanandshade.com',
+                                        style: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: 16,
                                         ),
                                       ),
-                                      const SizedBox(height: 8),
-                                      TextButton(
-                                        onPressed: () {},
-                                        child: const Text(
-                                          '+919488536969',
-                                          style: TextStyle(
-                                            color: Colors.white70,
-                                            fontSize: 16,
-                                          ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        '+919488536969',
+                                        style: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: 16,
                                         ),
                                       ),
                                     ],
                                   ),
-                                  const Column(
+                                  Column(
                                     children: [
                                       Text(
                                         'Span and Shade',
