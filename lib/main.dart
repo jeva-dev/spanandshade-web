@@ -24,16 +24,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-          useMaterial3: true,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: Colors.black,
         ),
         home: const MainUI(),
         darkTheme: ThemeData.dark().copyWith(
           primaryColor: Colors.blueAccent, // Primary color for the app
           // Background color
-          scaffoldBackgroundColor:
-              Colors.grey[850], // Background for the scaffold
+          scaffoldBackgroundColor: Colors.black, // Background for the scaffold
         ));
   }
 }
