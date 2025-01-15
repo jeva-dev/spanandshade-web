@@ -150,43 +150,43 @@ class _MainUIState extends State<MainUI> {
                                   'title': 'Schematic Plan',
                                   'description':
                                       'Transforming ideas into feasible architectural plan.',
-                                  'image': 'schematic.jpeg',
+                                  'image': 'assets/schematic.jpeg',
                                 },
                                 {
                                   'title': 'Elevation',
                                   'description':
                                       'Creating two-dimensional drawing that shows one side of a building or space from a straight-on perspective.',
-                                  'image': 'elevation.jpeg',
+                                  'image': 'assets/elevation.jpeg',
                                 },
                                 {
                                   'title': '3D Interior Design',
                                   'description':
                                       'Creating a virtual model of a space interior using software.',
-                                  'image': '3d.jpeg',
+                                  'image': 'assets/3d.jpeg',
                                 },
                                 {
                                   'title': 'Electrical Layout',
                                   'description':
                                       'Creating technical drawing that shows the location of electrical components in a building.',
-                                  'image': 'electrical.jpeg',
+                                  'image': 'assets/electrical.jpeg',
                                 },
                                 {
                                   'title': 'Lighting Layout',
                                   'description':
                                       'Creating a visual representation of how light will be distributed in a space, based on the placement of specific lighting fixtures or natural light.',
-                                  'image': 'lighting.jpeg',
+                                  'image': 'assets/lighting.jpeg',
                                 },
                                 {
                                   'title': 'Plumbing Layout',
                                   'description':
                                       'Creating a detailed plan that shows the arrangement of pipes, fixtures, and appliances in a building.',
-                                  'image': 'plumbing.jpeg',
+                                  'image': 'assets/plumbing.jpeg',
                                 },
                                 {
                                   'title': '2D Detailed Plan',
                                   'description':
                                       'Creating a top-down view, similar to a bird-eye view, showing the arrangement of rooms, walls, doors, windows, and other architectural features.',
-                                  'image': '2d.png',
+                                  'image': 'assets/2d.png',
                                 },
                               ];
                               return serviceCard(
@@ -211,12 +211,12 @@ class _MainUIState extends State<MainUI> {
                       builder: (context, constraints) {
                         bool isMobile = constraints.maxWidth < 600;
                         return isMobile
-                            ? Column(
+                            ? const Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Column(
                                     children: [
-                                      const Text(
+                                      Text(
                                         'Contact Us',
                                         style: TextStyle(
                                           fontSize: 18,
@@ -224,32 +224,26 @@ class _MainUIState extends State<MainUI> {
                                           color: Colors.tealAccent,
                                         ),
                                       ),
-                                      const SizedBox(height: 8),
-                                      TextButton(
-                                        onPressed: () {},
-                                        child: const Text(
-                                          'info@spanandshade.com',
-                                          style: TextStyle(
-                                            color: Colors.white70,
-                                            fontSize: 14,
-                                          ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        'info@spanandshade.com',
+                                        style: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: 14,
                                         ),
                                       ),
-                                      const SizedBox(height: 8),
-                                      TextButton(
-                                        onPressed: () {},
-                                        child: const Text(
-                                          '+919488536969',
-                                          style: TextStyle(
-                                            color: Colors.white70,
-                                            fontSize: 14,
-                                          ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        '+919488536969',
+                                        style: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
                                   ),
-                                  const SizedBox(height: 16),
-                                  const Column(
+                                  SizedBox(height: 16),
+                                  Column(
                                     children: [
                                       Text(
                                         'Span and Shade',
