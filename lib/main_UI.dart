@@ -126,77 +126,71 @@ class _MainUIState extends State<MainUI> {
                           ),
                         ),
                         const SizedBox(height: 16),
-                        ConstrainedBox(
-                          constraints: BoxConstraints(
-                            maxHeight:
-                                isMobile ? 800 : 1000, // Limit the height
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: isMobile
+                                ? 1
+                                : (constraints.maxWidth < 1200 ? 2 : 3),
+                            crossAxisSpacing: 16,
+                            mainAxisSpacing: 16,
+                            childAspectRatio: 3 / 2,
                           ),
-                          child: GridView.builder(
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: isMobile
-                                  ? 1
-                                  : (constraints.maxWidth < 1200 ? 2 : 3),
-                              crossAxisSpacing: 16,
-                              mainAxisSpacing: 16,
-                              childAspectRatio: 3 / 2,
-                            ),
-                            itemCount: 7, // Total number of service cards
-                            itemBuilder: (context, index) {
-                              final services = [
-                                {
-                                  'title': 'Schematic Plan',
-                                  'description':
-                                      'Transforming ideas into feasible architectural plan.',
-                                  'image': 'assets/schematic.jpeg',
-                                },
-                                {
-                                  'title': 'Elevation',
-                                  'description':
-                                      'Creating two-dimensional drawing that shows one side of a building or space from a straight-on perspective.',
-                                  'image': 'assets/elevation.jpeg',
-                                },
-                                {
-                                  'title': '3D Interior Design',
-                                  'description':
-                                      'Creating a virtual model of a space interior using software.',
-                                  'image': 'assets/3d.jpeg',
-                                },
-                                {
-                                  'title': 'Electrical Layout',
-                                  'description':
-                                      'Creating technical drawing that shows the location of electrical components in a building.',
-                                  'image': 'assets/electrical.jpeg',
-                                },
-                                {
-                                  'title': 'Lighting Layout',
-                                  'description':
-                                      'Creating a visual representation of how light will be distributed in a space, based on the placement of specific lighting fixtures or natural light.',
-                                  'image': 'assets/lighting.jpeg',
-                                },
-                                {
-                                  'title': 'Plumbing Layout',
-                                  'description':
-                                      'Creating a detailed plan that shows the arrangement of pipes, fixtures, and appliances in a building.',
-                                  'image': 'assets/plumbing.jpeg',
-                                },
-                                {
-                                  'title': '2D Detailed Plan',
-                                  'description':
-                                      'Creating a top-down view, similar to a bird-eye view, showing the arrangement of rooms, walls, doors, windows, and other architectural features.',
-                                  'image': 'assets/2d.png',
-                                },
-                              ];
-                              return serviceCard(
-                                services[index]['title']!,
-                                services[index]['description']!,
-                                isMobile,
-                                services[index]['image']!,
-                              );
-                            },
-                          ),
+                          itemCount: 7, // Total number of service cards
+                          itemBuilder: (context, index) {
+                            final services = [
+                              {
+                                'title': 'Schematic Plan',
+                                'description':
+                                    'Transforming ideas into feasible architectural plan.',
+                                'image': 'assets/schematic.jpeg',
+                              },
+                              {
+                                'title': 'Elevation',
+                                'description':
+                                    'Creating two-dimensional drawing that shows one side of a building or space from a straight-on perspective.',
+                                'image': 'assets/elevation.jpeg',
+                              },
+                              {
+                                'title': '3D Interior Design',
+                                'description':
+                                    'Creating a virtual model of a space interior using software.',
+                                'image': 'assets/3d.jpeg',
+                              },
+                              {
+                                'title': 'Electrical Layout',
+                                'description':
+                                    'Creating technical drawing that shows the location of electrical components in a building.',
+                                'image': 'assets/electrical.jpeg',
+                              },
+                              {
+                                'title': 'Lighting Layout',
+                                'description':
+                                    'Creating a visual representation of how light will be distributed in a space, based on the placement of specific lighting fixtures or natural light.',
+                                'image': 'assets/lighting.jpeg',
+                              },
+                              {
+                                'title': 'Plumbing Layout',
+                                'description':
+                                    'Creating a detailed plan that shows the arrangement of pipes, fixtures, and appliances in a building.',
+                                'image': 'assets/plumbing.jpeg',
+                              },
+                              {
+                                'title': '2D Detailed Plan',
+                                'description':
+                                    'Creating a top-down view, similar to a bird-eye view, showing the arrangement of rooms, walls, doors, windows, and other architectural features.',
+                                'image': 'assets/2d.png',
+                              },
+                            ];
+                            return serviceCard(
+                              services[index]['title']!,
+                              services[index]['description']!,
+                              isMobile,
+                              services[index]['image']!,
+                            );
+                          },
                         ),
                       ],
                     ),
@@ -363,7 +357,7 @@ class _MainUIState extends State<MainUI> {
             borderRadius: BorderRadius.circular(8),
             child: Image.asset(
               imagePath,
-              height: isMobile ? 50 : 120, // Adjust image height for mobile
+              height: isMobile ? 110 : 200, // Adjust image height for mobile
               width: double.infinity,
               fit: BoxFit.cover,
             ),
