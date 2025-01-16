@@ -16,7 +16,7 @@ class _MainUIState extends State<MainUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset('s&s.png'),
+        leading: Image.asset('assets/sns.png'),
         title: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth < 600) {
