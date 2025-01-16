@@ -150,43 +150,43 @@ class _MainUIState extends State<MainUI> {
                                   'title': 'Schematic Plan',
                                   'description':
                                       'Transforming ideas into feasible architectural plan.',
-                                  'image': '../assets/schematic.jpeg',
+                                  'image': 'assets/schematic.jpeg',
                                 },
                                 {
                                   'title': 'Elevation',
                                   'description':
                                       'Creating two-dimensional drawing that shows one side of a building or space from a straight-on perspective.',
-                                  'image': '../assets/elevation.jpeg',
+                                  'image': 'assets/elevation.jpeg',
                                 },
                                 {
                                   'title': '3D Interior Design',
                                   'description':
                                       'Creating a virtual model of a space interior using software.',
-                                  'image': '../assets/3d.jpeg',
+                                  'image': 'assets/3d.jpeg',
                                 },
                                 {
                                   'title': 'Electrical Layout',
                                   'description':
                                       'Creating technical drawing that shows the location of electrical components in a building.',
-                                  'image': '../assets/electrical.jpeg',
+                                  'image': 'assets/electrical.jpeg',
                                 },
                                 {
                                   'title': 'Lighting Layout',
                                   'description':
                                       'Creating a visual representation of how light will be distributed in a space, based on the placement of specific lighting fixtures or natural light.',
-                                  'image': '../assets/lighting.jpeg',
+                                  'image': 'assets/lighting.jpeg',
                                 },
                                 {
                                   'title': 'Plumbing Layout',
                                   'description':
                                       'Creating a detailed plan that shows the arrangement of pipes, fixtures, and appliances in a building.',
-                                  'image': '../assets/plumbing.jpeg',
+                                  'image': 'assets/plumbing.jpeg',
                                 },
                                 {
                                   'title': '2D Detailed Plan',
                                   'description':
                                       'Creating a top-down view, similar to a bird-eye view, showing the arrangement of rooms, walls, doors, windows, and other architectural features.',
-                                  'image': '../assets/2d.png',
+                                  'image': 'assets/2d.png',
                                 },
                               ];
                               return serviceCard(
