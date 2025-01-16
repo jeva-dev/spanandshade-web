@@ -357,7 +357,7 @@ class _MainUIState extends State<MainUI> {
             borderRadius: BorderRadius.circular(8),
             child: Image.asset(
               imagePath,
-              height: isMobile ? 110 : 200, // Adjust image height for mobile
+              height: isMobile ? 90 : 200, // Adjust image height for mobile
               width: double.infinity,
               fit: BoxFit.cover,
             ),
